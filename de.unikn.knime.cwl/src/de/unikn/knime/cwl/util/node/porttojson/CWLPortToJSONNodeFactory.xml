@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./cwltojson.png" type="Manipulator"
+    xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>CWL Port to JSON</name>
+
+    <shortDescription>
+        Creates a data table with a cell containing the JSON content of a CWL port.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+            This node writes the content of a CWL port to a KNIME table as a JSON cell.
+        </intro>
+    </fullDescription>
+    <ports>
+        <inPort index="0" name="CWL object">A CWL object to put into the table.
+        </inPort>
+        <outPort index="0" name="Table with JSON">A table with a JSON cell containing the CWL port's content.
+        </outPort>
+    </ports>
+</knimeNode>

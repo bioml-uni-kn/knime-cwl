@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./cwltojson.png" type="Manipulator"
+    xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>CWL Port to Variable</name>
+
+    <shortDescription>
+        Creates a flow variable containing the JSON content of a CWL port.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+            This node writes the content of a CWL port to a flow variable.
+        </intro>
+    </fullDescription>
+    <ports>
+        <inPort index="0" name="CWL object">A CWL object to put into the table.
+        </inPort>
+        <outPort index="0" name="Flow variables">The flow variable created from the CWL object
+        </outPort>
+    </ports>
+</knimeNode>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./arraybuilder.png" type="Manipulator"
+    xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Build CWL Array</name>
+
+    <shortDescription>
+        Creates a CWL array object from other objects.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+        This node merges several CWL objects into an array object.
+        If the third port is an array, the two other ports are inserted
+        into this object. Otherwise all three objects are merged into
+        a new array.
+        </intro>
+    </fullDescription>
+    <ports>
+        <inPort index="0" name="CWL object">A CWL object to put into the array.
+        </inPort>
+        <inPort index="1" name="CWL object">A CWL object to put into the array.
+        </inPort>
+        <inPort index="2" name="CWL object">A CWL object to put into the array or, if this is a array, the array to append the other objects to.
+        </inPort>
+        <outPort index="0" name="CWL array">A CWL array object
+        </outPort>
+    </ports>
+</knimeNode>

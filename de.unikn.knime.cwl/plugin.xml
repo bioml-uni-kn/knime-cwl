@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.knime.workbench.repository.nodesets">
+      <nodeset
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.dynode.CWLNodeSetFactory">
+      </nodeset>
+      <nodeset
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.jsontoport.JsonToPortNodeSetFactory">
+      </nodeset>
+      <nodeset
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.convertany.AnyToSpecificNodeSetFactory">
+      </nodeset>
+      <nodeset
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.input.CWLInputNodeSetFactory">
+      </nodeset>
+   </extension>
+   <extension
+         point="org.knime.core.PortType">
+      <portType
+            color="#800a58"
+            hidden="false"
+            name="CWL Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.CWLPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#800a7a"
+            hidden="false"
+            name="CWL File Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.file.CWLFilePortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.file.CWLFilePortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#6e0a80"
+            hidden="false"
+            name="CWL Directory Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.dir.CWLDirectoryPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.dir.CWLDirectoryPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#390a80"
+            hidden="false"
+            name="CWL Integer Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.integer.CWLIntPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.integer.CWLIntPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#0a1880"
+            hidden="false"
+            name="CWL Long Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.lng.CWLLongPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.lng.CWLLongPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#0a4780"
+            hidden="false"
+            name="CWL Double Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.dbl.CWLDoublePortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.dbl.CWLDoublePortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#0a6480"
+            hidden="false"
+            name="CWL Float Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.flt.CWLFloatPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.flt.CWLFloatPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#4d4d4d"
+            hidden="false"
+            name="CWL Boolean Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.bool.CWLBoolPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.bool.CWLBoolPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#628c5d"
+            hidden="false"
+            name="CWL Enum Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.enm.CWLEnumPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.enm.CWLEnumPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#53ab49"
+            hidden="false"
+            name="CWL Record Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.record.CWLRecordPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.record.CWLRecordPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#275c21"
+            hidden="false"
+            name="CWL Array Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.array.CWLArrayPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.array.CWLArrayPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+      <portType
+            color="#ba9330"
+            hidden="false"
+            name="CWL String Data"
+            objectClass="de.unikn.knime.cwl.dynode.port.string.CWLStringPortObject"
+            objectSerializer="de.unikn.knime.cwl.dynode.port.string.CWLStringPortObjectSerializer"
+            specClass="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpec"
+            specSerializer="de.unikn.knime.cwl.dynode.port.CWLPortObjectSpecSerializer">
+      </portType>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            description="Auto-generated CWL nodes and utilities"
+            icon="icons/missing.gif"
+            level-id="cwl"
+            locked="true"
+            name="CWL"
+            path="/">
+      </category>
+      <category
+            description="Utility nodes for CWL execution"
+            icon="icons/missing.gif"
+            level-id="util"
+            locked="true"
+            name="Utilities"
+            path="/cwl">
+      </category>
+      <category
+            description="Data type conversion utilities"
+            icon="icons/missing.gif"
+            level-id="convert"
+            locked="true"
+            name="Conversion"
+            path="/cwl/util">
+      </category>
+      <category
+            description="Input nodes for CWL execution"
+            icon="icons/missing.gif"
+            level-id="input"
+            locked="true"
+            name="Inputs"
+            path="/cwl/util">
+      </category>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            category-path="/cwl/util"
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.createrecord.BuildRecordNodeFactory">
+      </node>
+      <node
+            category-path="/cwl/util"
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.createarray.BuildArrayNodeFactory">
+      </node>
+      <node
+            category-path="/cwl/util/convert"
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.porttojson.CWLPortToJSONNodeFactory">
+      </node>
+      <node
+            category-path="/cwl/util/convert"
+            deprecated="false"
+            factory-class="de.unikn.knime.cwl.util.node.porttovariable.CWLPortToVariableNodeFactory">
+      </node>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.knime.workbench.ui.preferences"
+            class="de.unikn.knime.cwl.preferences.CWLPreferencePage"
+            id="org.knime.workbench.ui.preferences.cwl"
+            name="CWL">
+      </page>
+   </extension>
+   
+</plugin>

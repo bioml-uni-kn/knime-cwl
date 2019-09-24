@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./recordbuilder.png" type="Manipulator"
+    xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Build CWL Record</name>
+
+    <shortDescription>
+        Creates a CWL record object from other objects.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+        This node merges several CWL objects into a record object.
+        If the third port is a record, the two other ports are inserted
+        into this object. Otherwise all three objects are merged into
+        a new record.
+        </intro>
+    </fullDescription>
+    <ports>
+        <inPort index="0" name="CWL object">A CWL object to put into the record.
+        </inPort>
+        <inPort index="1" name="CWL object">A CWL object to put into the record.
+        </inPort>
+        <inPort index="2" name="CWL object">A CWL object to put into the record or, if this is a record, the record to append the other objects to.
+        </inPort>
+        <outPort index="0" name="CWL record">A CWL record object
+        </outPort>
+    </ports>
+</knimeNode>
